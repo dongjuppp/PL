@@ -10,7 +10,7 @@ public class ComPlayer implements Iterable<String> {
     ArrayList<String> dict = new ArrayList<>();
     Scanner scan;
     private int cursor;
-    private int lastRet=-1;
+
     int listSize;
     static int index=0;
 
@@ -29,7 +29,7 @@ public class ComPlayer implements Iterable<String> {
         public String next(){
             int i=cursor;
             cursor+=1;
-            return dict.get(lastRet=i);
+            return dict.get(i);
         }
 
     }

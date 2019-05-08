@@ -1,6 +1,5 @@
 import game.GameMgr;
 
-import java.io.File;
 import java.util.Scanner;
 
 public class Main {
@@ -14,6 +13,7 @@ public class Main {
             String s=scan.next();
             if(s.charAt(0)=='n')
                 break;
+
         }
 
 

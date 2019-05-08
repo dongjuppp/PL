@@ -8,6 +8,7 @@ public class GameMgr {
     ComPlayer cp = new ComPlayer();
     Scanner scan;
     int i=0;
+
     HashMap<String,Boolean> userWord = new HashMap<>(); //사전에 등록안된 단어를 등록
     HashMap<String,Boolean> textWord = new HashMap<>(); //사전에 등록된 단어를 등록
     public void doit(){
@@ -30,7 +31,7 @@ public class GameMgr {
             //여기서 사전,유저 판단 후 중복여부
             if(textWord.containsKey(string)){ //사전에 등록
                 if(!textWord.get(string)){
-                    System.out.println("이미 사용된 단어를 사용했습니다");
+                    System.out.println("이미 사용된 단어를 사용했습니다!");
                     break;
                 }
                 textWord.replace(string,false);
@@ -48,16 +49,22 @@ public class GameMgr {
             last=string.charAt(string.length()-1);
 
             for(String s:cp){
+
                 if(s.charAt(0)==last){
                     textWord.replace(s,false);
                     System.out.println(s);
                     first=s.charAt(s.length()-1);
+
                     break;
                 }
                 if(i==0) i++;
+
             }
+
         }
     }
+
+
 
 
 
