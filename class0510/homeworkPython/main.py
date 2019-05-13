@@ -1,11 +1,13 @@
 
 from song import Song
 from user import User
+
 text=[line for line in open('songs.txt','r')]
 users=[line for line in open('user.txt','r')]
 
 songList=[]
 singerDict={}
+
 for str1 in text:
     tmp=str1.split()
     stmp=Song(tmp[0],tmp[1],tmp[2],tmp[3])
@@ -20,7 +22,7 @@ for str1 in text:
 userList=[]
 for str1 in users:
     tmp=str1.split()
-    sonl=[songList[int(tmp[x])-1] for x in range(4,len(tmp)-1)]
+    sonl=[songList[int(tmp[x])-1] for x in range(4,len(tmp)-1)] #각 유저마다 노래 리스트 가지고 있음
     usr=User()
     usr.info(tmp[0],tmp[1],tmp[2],tmp[3],sonl)
     userList.append(usr)
