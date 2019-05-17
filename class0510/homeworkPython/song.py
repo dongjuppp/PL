@@ -27,19 +27,19 @@ class Song:
             self.print()
 
     def mgenderP(self):
-        if(self.man>=3):
+        if(self.man>=4):
             self.print()
     def wgenderP(self):
-        if(self.woman>=3):
+        if(self.woman>=4):
             self.print()
 
     def agePT(self):
-        if(self.two>=2):
+        if(self.two>=3):
             self.print()
 
     def agePTh(self):
-        if(self.three>=2):
+        if(self.three>=3):
             self.print()
     def ageFP(self):
-        if(self.four>=2):
+        if(self.four>=3):
             self.print()

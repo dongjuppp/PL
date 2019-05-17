@@ -8,10 +8,12 @@ import java.util.Scanner;
 public class StudentDemo {
 
 	static ArrayList<Student> stList = new ArrayList<>();
+	/*
 	public static void main(String[] args) {
 		StudentDemo demo = new StudentDemo();
 		demo.doit();
 	}
+	*/
 	public void doit() {
 		readFile("input/students.txt");
 		printAll();
