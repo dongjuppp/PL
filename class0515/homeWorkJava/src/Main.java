@@ -1,17 +1,17 @@
-import book.BookDemo;
-import great.GreatDemo;
+import book.Book;
+import great.Great;
 import manage.Manager;
-import student.StudentDemo;
+import student.Student;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Manager[] mgr = {new StudentDemo(),new BookDemo(), new GreatDemo()};
+        Manager[] mgr={new Manager<Student>(),new Manager<Book>(),new Manager<Great>()};
         Scanner scanner = new Scanner(System.in);
-        mgr[0].readFile("students.txt");
-        mgr[1].readFile("book.txt");
-        mgr[2].readFile("great.txt");
+        mgr[0].readFile("students.txt","Student");
+        mgr[1].readFile("book.txt","Book");
+        mgr[2].readFile("great.txt","Great");
         while(true){
             System.out.println("1.학생 2.책 3.위인 4.종료...");
             int num=scanner.nextInt();

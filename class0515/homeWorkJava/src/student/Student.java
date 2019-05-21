@@ -14,9 +14,7 @@ public class Student implements Managable {
     String phone;
 
 
-    public static Student create(){
-        return new Student();
-    }
+
 
     @Override
     public void read(Scanner in){

@@ -16,6 +16,7 @@ public class Book implements Managable {
 
 
 
+
     @Override
     public void read(Scanner in){
         id = Number++;

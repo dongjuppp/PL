@@ -5,9 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Manager<T extends Managable> {
+public class Manager<T extends Managable>{
     public ArrayList<T> list = new ArrayList<>();
-
 
 
     public void doit(Scanner scanner){
@@ -28,15 +27,14 @@ public class Manager<T extends Managable> {
                 break;
         }
     }
-    public void readFile(String filename){
+    public void readFile(String filename,String identity){
 
         T temp=null;
         Scanner fs = openFile(filename);
         fs.nextLine();
         while(fs.hasNext()){
-
+            temp=(T)Factory.create(identity);
             temp.read(fs);
-
             if(list.contains(temp))
                 continue;
             list.add(temp);
